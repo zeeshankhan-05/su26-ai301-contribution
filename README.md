@@ -3,7 +3,7 @@
 **Contribution Number:** 1
 **Student:** Zeeshan Khan
 **Issue:** [https://github.com/Shopify/tapioca/issues/1834](https://github.com/Shopify/tapioca/issues/1834)
-**Status:** Phase III Complete
+**Status:** Phase IV Complete
 
 ---
 
@@ -269,6 +269,15 @@ Completed Phase III implementation on branch `fix-issue-1834`:
 - Added user-facing output for both newly added and already-present suppressions
 - Ran `bin/test spec/tapioca/cli/gem_spec.rb`, `bin/test spec/tapioca/cli/dsl_spec.rb`, `bin/typecheck`, and `bin/style`
 
+### Week 4 Progress
+
+Completed Phase IV by opening the pull request to Shopify/tapioca:
+
+- Opened [PR #2653](https://github.com/Shopify/tapioca/pull/2653) from `zeeshankhan-05:fix-issue-1834` into `Shopify/tapioca:main`
+- Documented the dual-pass validation approach, idempotent `sorbet/config` updates, and user-facing messaging in the PR description
+- Requested review from [@KaanOzkan](https://github.com/KaanOzkan), who provided implementation guidance on issue #1834
+- Updated this Contribution README with the PR link and current status
+
 ### Code Changes
 
 - **Files modified:** `lib/tapioca/helpers/rbi_files_helper.rb`, `spec/tapioca/cli/gem_spec.rb`
@@ -280,9 +289,9 @@ Completed Phase III implementation on branch `fix-issue-1834`:
 
 ## Pull Request
 
-**PR Link:** Not submitted yet.
+**PR Link:** [https://github.com/Shopify/tapioca/pull/2653](https://github.com/Shopify/tapioca/pull/2653)
 
-**PR Description:** Not started yet.
+**PR Description:** Automatically handles Sorbet error `5012` during gem RBI validation when `auto_strictness` is enabled. Keeps the existing namer pass for error `4010`, adds a second full Sorbet pass to detect payload superclass redefinitions, appends `--suppress-payload-superclass-redefinition-for=ConstantName` to `sorbet/config` idempotently, and prints a user-facing message about the mismatch. Includes an integration test in `spec/tapioca/cli/gem_spec.rb`. Closes #1834.
 
 **Maintainer Feedback:**
 
@@ -294,9 +303,11 @@ Guidance received on the GitHub issue from Shopify contributor [@KaanOzkan](http
 - Assert that the user is still informed about the mismatch
 - Make the config update idempotent
 
-No maintainer review or approval of the final implementation has been received yet.
+After opening the PR, I left a comment on [PR #2653](https://github.com/Shopify/tapioca/pull/2653#issuecomment-4775361100) politely requesting review from @KaanOzkan. No maintainer review of the implementation has been received yet.
 
-**Status:** Not started yet.
+**Next steps:** Await maintainer feedback on PR #2653 and address any requested changes.
+
+**Status:** Awaiting review
 
 ---
 
