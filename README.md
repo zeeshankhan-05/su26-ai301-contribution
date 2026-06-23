@@ -277,6 +277,7 @@ Completed Phase IV by opening the pull request to Shopify/tapioca:
 - Documented the dual-pass validation approach, idempotent `sorbet/config` updates, and user-facing messaging in the PR description
 - Requested review from [@KaanOzkan](https://github.com/KaanOzkan), who provided implementation guidance on issue #1834
 - Updated this Contribution README with the PR link and current status
+- GitHub Actions reported a failing `cla` check because Shopify's Contributor License Agreement has not been signed yet
 
 ### Code Changes
 
@@ -305,9 +306,19 @@ Guidance received on the GitHub issue from Shopify contributor [@KaanOzkan](http
 
 After opening the PR, I left a comment on [PR #2653](https://github.com/Shopify/tapioca/pull/2653#issuecomment-4775361100) politely requesting review from @KaanOzkan. No maintainer review of the implementation has been received yet.
 
-**Next steps:** Await maintainer feedback on PR #2653 and address any requested changes.
+**CI status:**
 
-**Status:** Awaiting review
+- The GitHub Actions `cla` check failed because not all contributors have signed [Shopify's CLA](https://cla.shopify.com).
+- This is not a code failure. Shopify requires CLA signature before a pull request can be merged.
+
+**Next steps:**
+
+1. Sign the CLA at [https://cla.shopify.com](https://cla.shopify.com) using the `zeeshankhan-05` GitHub account.
+2. Confirm the email used on the PR commits is associated with that GitHub account.
+3. Comment on [PR #2653](https://github.com/Shopify/tapioca/pull/2653): `I have signed the CLA!` to re-run the check.
+4. After the `cla` check passes, await maintainer feedback and address any requested changes.
+
+**Status:** Awaiting review (blocked on CLA signature)
 
 ---
 
