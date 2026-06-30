@@ -345,3 +345,100 @@ Not started yet.
 - CodePath AI301 Phase I instructions
 - First Contributions tutorial
 
+---
+
+# Contribution 2: DSL output support for Sorbet packages mode
+
+**Contribution Number:** 2
+**Student:** Zeeshan Khan
+**Issue:** [https://github.com/Shopify/tapioca/issues/2586](https://github.com/Shopify/tapioca/issues/2586)
+**Status:** Phase I In Progress
+
+---
+
+## Why I Chose This Issue
+
+I chose this issue for my second CodePath AI301 contribution because it lets me continue building familiarity with Shopify/tapioca after my first contribution on #1834. I already understand parts of the RBI generation and validation workflow from that work, and this issue extends that knowledge into a different but related area: where Tapioca writes DSL RBI files when Sorbet packages mode is enabled.
+
+The issue is also active and connected to people I have already interacted with in the project. Issue #2586 was opened recently, is labeled `help-wanted`, and has maintainer discussion from [@KaanOzkan](https://github.com/KaanOzkan), who also provided implementation guidance on my first contribution. That makes it feel like a natural next step rather than starting over in a new codebase. The problem is more ambitious than #1834 because it involves package-aware output routing, configuration, and cleanup behavior across multiple parts of Tapioca. I plan to ask in my GitHub issue comment whether maintainers prefer a full first PR covering the proposed `dsl.packaged_output` flow or a smaller initial step, since the scope is still uncertain before Phase II reproduction.
+
+---
+
+## Understanding the Issue
+
+### Problem Description
+
+When Sorbet packages mode is enabled (`--sorbet-packages`), Tapioca's `dsl` command currently writes generated RBI files into the global `sorbet/rbi/dsl/` directory at the repository root. Those files are treated as belonging to the root package. If a generated stub modifies a constant owned by an enrolled package, Sorbet can report error `5084` because the RBI is in the wrong package context.
+
+### Expected Behavior
+
+Tapioca should support an opt-in package-aware output mode (proposed as `dsl.packaged_output`) that places generated DSL RBI files inside the owning package's directory, for example `<pack_root>/sorbet/rbi/dsl/`, instead of always writing to the global root `sorbet/rbi/dsl/` path.
+
+### Current Behavior
+
+Today, `tapioca dsl` writes DSL RBI output to the global `sorbet/rbi/dsl/` directory regardless of package ownership. In a packages-mode codebase, that can produce RBI files that conflict with Sorbet's package boundaries and trigger ownership errors such as `5084`.
+
+### Affected Components
+
+Preliminary areas likely involved (to be confirmed in Phase II):
+
+- DSL output routing and file-writing paths
+- DSL RBI generation logic
+- `tapioca.yml` configuration (proposed `dsl.packaged_output`)
+- `__package.rb` discovery and package-root detection
+- Cleanup and verification behavior for moved or regenerated RBI files
+- CLI and integration tests for packages-mode DSL output
+
+---
+
+## Reproduction Process
+
+Not started yet. This will be completed in Phase II.
+
+---
+
+## Solution Approach
+
+Not started yet. Phase II.
+
+---
+
+## Testing Strategy
+
+Not started yet. Phase II.
+
+---
+
+## Implementation Notes
+
+### Week 1 Progress (Phase I)
+
+- Selected Shopify/tapioca issue #2586 for Contribution 2
+- Verified the issue is open, unassigned, and appears claimable (no existing PR or prior claim comment from me)
+- GitHub issue interest comment pending (`gh` CLI not authenticated in this environment)
+- CodePath Google Sheet claim pending
+- Appended this Contribution 2 section to the living Contribution README
+
+Not started yet. Phase III.
+
+---
+
+## Pull Request
+
+Not started yet. Phase IV.
+
+---
+
+## Learnings & Reflections
+
+Not started yet. After Phase IV.
+
+---
+
+## Resources Used
+
+- Shopify/tapioca issue #2586: [https://github.com/Shopify/tapioca/issues/2586](https://github.com/Shopify/tapioca/issues/2586)
+- Shopify/tapioca repository: [https://github.com/Shopify/tapioca](https://github.com/Shopify/tapioca)
+- CodePath AI301 Phase I instructions
+- Sorbet error 5084 reference: [https://srb.help/5084](https://srb.help/5084)
+
