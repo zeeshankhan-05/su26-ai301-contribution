@@ -352,7 +352,7 @@ Not started yet.
 **Contribution Number:** 2
 **Student:** Zeeshan Khan
 **Issue:** [https://github.com/Shopify/tapioca/issues/2586](https://github.com/Shopify/tapioca/issues/2586)
-**Status:** Phase I In Progress
+**Status:** Phase I Complete
 
 ---
 
@@ -416,9 +416,9 @@ Not started yet. Phase II.
 - Selected Shopify/tapioca issue #2586 for Contribution 2
 - Verified the issue is open, unassigned, and appears claimable (no existing PR or prior claim comment from me)
 - Posted GitHub issue interest comment: [https://github.com/Shopify/tapioca/issues/2586#issuecomment-4839243917](https://github.com/Shopify/tapioca/issues/2586#issuecomment-4839243917)
-- CodePath Google Sheet claim pending
-- Phase I check-in form submission pending
-- Slack announcement pending
+- Claimed the issue on the CodePath Google Sheet
+- Submitted the Phase I check-in form
+- Posted the Phase I Slack announcement in `#dts-su26-ai301-celebration`
 - Appended this Contribution 2 section to the living Contribution README
 
 Not started yet. Phase III.
