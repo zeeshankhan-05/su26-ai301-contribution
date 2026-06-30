@@ -415,8 +415,10 @@ Not started yet. Phase II.
 
 - Selected Shopify/tapioca issue #2586 for Contribution 2
 - Verified the issue is open, unassigned, and appears claimable (no existing PR or prior claim comment from me)
-- GitHub issue interest comment pending (`gh` CLI not authenticated in this environment)
+- Posted GitHub issue interest comment: [https://github.com/Shopify/tapioca/issues/2586#issuecomment-4839243917](https://github.com/Shopify/tapioca/issues/2586#issuecomment-4839243917)
 - CodePath Google Sheet claim pending
+- Phase I check-in form submission pending
+- Slack announcement pending
 - Appended this Contribution 2 section to the living Contribution README
 
 Not started yet. Phase III.
@@ -438,6 +440,7 @@ Not started yet. After Phase IV.
 ## Resources Used
 
 - Shopify/tapioca issue #2586: [https://github.com/Shopify/tapioca/issues/2586](https://github.com/Shopify/tapioca/issues/2586)
+- GitHub issue comment: [https://github.com/Shopify/tapioca/issues/2586#issuecomment-4839243917](https://github.com/Shopify/tapioca/issues/2586#issuecomment-4839243917)
 - Shopify/tapioca repository: [https://github.com/Shopify/tapioca](https://github.com/Shopify/tapioca)
 - CodePath AI301 Phase I instructions
 - Sorbet error 5084 reference: [https://srb.help/5084](https://srb.help/5084)
